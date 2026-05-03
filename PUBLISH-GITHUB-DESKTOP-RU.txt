@@ -1,0 +1,41 @@
+Публикация через GitHub Desktop (Windows)
+==========================================
+
+Папка с проектом (уже есть Git и первый коммит):
+  C:\Users\LENOVO\Desktop\avbyusd
+
+Шаг 1. Установите GitHub Desktop
+  https://desktop.github.com/
+
+Шаг 2. Добавьте локальный репозиторий
+  GitHub Desktop → File → Add local repository…
+  → Choose… → укажите папку avbyusd → Add repository
+
+  Если Desktop пишет, что это «не репозиторий» — выберите именно папку,
+  внутри которой лежит скрытая папка .git (это и есть avbyusd).
+
+Шаг 3. Подключите удалённый репозиторий на GitHub
+  Вариант А — репозиторий УЖЕ создан на сайте (пустой):
+    Repository → Repository settings… → вкладка Remotes
+    → в Primary remote (origin) вставьте адрес, например:
+      git@github.com:belarussear-code/-Google-Chrome-av.by-USD-.git
+    или HTTPS:
+      https://github.com/belarussear-code/-Google-Chrome-av.by-USD-.git
+    → Save → в главном окне: Publish branch / Push origin (как предложит программа).
+
+  Вариант Б — репозитория ещё НЕТ:
+    Repository → Publish repository…
+    → выберите аккаунт, имя, видимость → Publish repository.
+
+Шаг 4. Отправить код
+  Убедитесь, что активная ветка — main (внизу в Desktop).
+  Нажмите Push origin (или «Publish branch», если ветка ещё не на сервере).
+
+Что в архиве проекта (для справки)
+  Корень: расширение Chrome (manifest.json, background.js, content.js, content.css).
+  android-app/ — приложение WebView (без папок build/ и local.properties — они в .gitignore).
+  mobile/ — закладка для мобильного браузера.
+  README.md — описание репозитория.
+
+Если Desktop спрашивает про «большие файлы» — в этом проекте только gradle-wrapper.jar
+в android-app/gradle/wrapper/ (нормально для сборки из командной строки).
