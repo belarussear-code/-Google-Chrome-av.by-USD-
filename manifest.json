@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "av.by — цена в USD (myfin.by)",
+  "version": "1.0.3",
+  "description": "Под основными ценами в BYN на av.by показывает примерную сумму в US$ по курсу НБРБ: myfin.by, при недоступности — api.nbrb.by. Блоки цены в списке, сверху ленты, индексе и на кнопке карточки. Курс кэшируется ~45 мин.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://myfin.by/*", "https://api.nbrb.by/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.av.by/*", "https://av.by/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
