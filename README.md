@@ -29,10 +29,6 @@
 
 > Разметка av.by может меняться: при пропаже конвертации проверьте классы в DevTools и при необходимости добавьте селектор в `PRICE_SELECTOR` в `content.js` (и синхронно в `android-app/.../inject.js`, закладку).
 
-## Мобильный Chrome — закладка
-
-В папке **`mobile/`**: исходник `bookmarklet-source.js`, однострочник `bookmarklet-one-line.txt`, страница **`index.html`** с кнопкой копирования URL закладки.
-
 ## Android-приложение (WebView)
 
 Папка **`android-app/`**: загружает av.by и подмешивает `app/src/main/assets/inject.js` (та же идея селекторов и курса).
